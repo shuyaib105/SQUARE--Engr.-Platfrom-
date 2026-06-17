@@ -1,0 +1,6 @@
+{
+  "name": "Eng. Platform",
+  "description": "An interactive educational portal for HSC and Engineering aspirants featuring interactive MCQ polls, chapter-wise PDF suggestions, customizable study routines, and real-time countdown trackers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
