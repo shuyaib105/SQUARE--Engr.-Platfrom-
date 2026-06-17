@@ -991,6 +991,7 @@ export default function App() {
               <div className="grid grid-cols-3 gap-2.5 sm:gap-4 md:gap-8">
                 {quickFeatures.map((feature) => {
                   if (!feature.isActive) return null;
+                  if (feature.adminOnly && !isAdmin) return null;
 
                   // Dynamic color styling
                   let bgClass = "bg-blue-50";
@@ -3029,7 +3030,7 @@ export default function App() {
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {quickFeatures.map((feat, idx) => (
+                        {quickFeatures.filter(f => !f.adminOnly || isAdmin).map((feat, idx) => (
                           <div key={feat.id} className="bg-white rounded-[2rem] border border-slate-200 p-6 md:p-8 shadow-sm space-y-6 relative overflow-hidden">
                             <div className="absolute top-0 right-0 bg-slate-100 text-slate-500 text-[10px] font-black px-4 py-1.5 rounded-bl-xl font-mixed uppercase">
                               ফিচার বাটন নং {toBanglaNumber(idx + 1)}

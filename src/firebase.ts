@@ -74,6 +74,7 @@ export const DEFAULT_QUICK_FEATURES: QuickFeature[] = [
     actionValue: "quiz-uploader",
     isActive: true,
     colorTheme: "emerald",
+    adminOnly: true,
   },
   {
     id: "quiz-player",

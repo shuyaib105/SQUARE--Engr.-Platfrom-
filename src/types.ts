@@ -95,5 +95,6 @@ export interface QuickFeature {
   actionValue: string;
   isActive: boolean;
   colorTheme: "blue" | "slate" | "purple" | "orange" | "red" | "indigo" | "emerald" | "amber";
+  adminOnly?: boolean;
 }
 
