@@ -76,15 +76,6 @@ export const DEFAULT_QUICK_FEATURES: QuickFeature[] = [
     colorTheme: "emerald",
     adminOnly: true,
   },
-  {
-    id: "quiz-player",
-    title: "কুইজ খেলুন",
-    iconName: "Trophy",
-    actionType: "view",
-    actionValue: "quiz-player",
-    isActive: true,
-    colorTheme: "amber",
-  },
 ];
 
 

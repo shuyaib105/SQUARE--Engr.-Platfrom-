@@ -97,7 +97,7 @@ export function getIconComponent(name: string, className: string = "w-6 h-6") {
 
 export default function App() {
   // Navigation & View State
-  const [view, setView] = useState<"home" | "login" | "course-details" | "pdf-suggestions" | "calendar-timeline" | "poll-practice" | "free-exams" | "subject-reviews" | "admin" | "quiz-uploader" | "quiz-player">("home");
+  const [view, setView] = useState<"home" | "login" | "course-details" | "pdf-suggestions" | "calendar-timeline" | "poll-practice" | "free-exams" | "subject-reviews" | "admin" | "quiz-uploader">("home");
   const [selectedCourseId, setSelectedCourseId] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<string>("HSC 26");
   const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -2864,12 +2864,6 @@ export default function App() {
           <div className="animate-tab-content">
             <div className="p-4"><button onClick={() => setView("home")} className="flex items-center gap-2 text-slate-700 font-bold"><ArrowLeft className="w-5 h-5"/> মূল মেনুতে ফিরুন</button></div>
             <QuizUploader />
-          </div>
-        )}
-        {view === "quiz-player" && (
-          <div className="animate-tab-content">
-            <div className="p-4"><button onClick={() => setView("home")} className="flex items-center gap-2 text-slate-700 font-bold"><ArrowLeft className="w-5 h-5"/> মূল মেনুতে ফিরুন</button></div>
-            <QuizPlayer />
           </div>
         )}
 
